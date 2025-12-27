@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Untuk Kamu</title>
+    <style>
+        body {
+            background-color: #f2efe9;
+            font-family: Georgia, serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #fff;
+            width: 90%;
+            max-width: 600px;
+            padding: 30px;
+            text-align: center;
+            border-radius: 8px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            font-size: 18px;
+            color: #444;
+            line-height: 1.6;
+        }
+
+        button {
+            padding: 12px 24px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .content {
+            display: none;
+        }
+
+        video {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            margin: 20px auto 0;
+            display: block;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div id="cover">
+        <h1>Sebuah Surat</h1>
+        <button onclick="bukaSurat()">Buka Surat</button>
+    </div>
+
+    <div id="isi" class="content">
+        <h1>Untuk Kamu</h1>
+        <p>
+            Aku nulis ini karena ada hal yang sulit aku ucapkan langsung.
+            Kamu punya tempat penting di hidup aku.
+            Lewat halaman ini, aku ingin kamu tahu perasaan aku yang sebenarnya.
+        </p>
+
+        <video controls>
+            <source src="video.mp4" type="video/mp4">
+            Browser kamu tidak mendukung video.
+        </video>
+    </div>
+</div>
+
+<script>
+    function bukaSurat() {
+        document.getElementById("cover").style.display = "none";
+        document.getElementById("isi").style.display = "block";
+    }
+</script>
+
+</body>
+</html>
